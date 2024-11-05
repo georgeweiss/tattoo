@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .signup-container {
+            width: 320px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .signup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .signup-header img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .signup-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .signup-header .back-icon {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .signup-container .button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="signup-header">
+            <a href="mainscreen.html"><img src="img/botao-voltar.png" alt="Voltar" id="back-arrow"></a>
+            <h2>Cadastro</h2>
+            <img id="logo-little" src="img/logo.png" alt="Tattoo Logo">
+        </div>
+        <hr>
+        <!--<form action="submit-signup">-->
+        <input type="text" name="name" placeholder="Nome">
+        <input type="text" name="cpf" placeholder="CPF">
+        <input type="text" name="phone" placeholder="Telefone">
+        <input type="email" name="email" placeholder="E-mail">
+        <input type="email" name="confirm-email" placeholder="Confirmar E-mail">
+        <input type="password" name="password" placeholder="Senha">
+        <input type="password" name="confirm-password" placeholder="Confirmar Senha">
+        <a href="cadastro2.html"><button class="button">Continuar</button></a>
+        <!--</form>-->
+    </div>
+</body>
+
+</html>

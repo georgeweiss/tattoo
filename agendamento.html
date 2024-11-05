@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        #desktop-conteiner {
+            background-color: white;
+            width: 100%;
+            max-width: 500px; /* Ajuste para controlar a largura máxima */
+            border-radius: 8px;
+            overflow: hidden; /* Garante que o conteúdo extra não escape */
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            box-sizing: border-box;
+            padding: -20px;
+        }
+
+        #back-arrow {
+            width: 24px;
+            height: 24px;
+        }
+
+        #logo-little {
+            width: 40px;
+            height: 40px;
+        }
+
+        .calendar {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-sizing: border-box; /* Certifica-se de que padding não expande a largura */
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .nav-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .month-year {
+            font-weight: bold;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .calendar-table th,
+        .calendar-table td {
+            width: 14.28%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .calendar-table td {
+            background-color: #444;
+            border: 1px solid #555;
+            cursor: pointer;
+        }
+
+        .calendar-table .prev-month,
+        .calendar-table .next-month {
+            color: #999;
+        }
+
+        .calendar-table .today {
+            background-color: #666;
+        }
+
+        .available-times {
+            margin: 20px 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .available-times h2 {
+            margin-bottom: 10px;
+        }
+
+        .time-slot {
+            display: block;
+            width: 90%; /* Ajuste para não ultrapassar os limites */
+            margin: 5px auto;
+            padding: 10px;
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #000;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-button {
+            display: block;
+            width: 30%;
+            padding: 10px;
+            margin: 20px auto;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Estilos para desktop */
+        @media (min-width: 768px) {
+            #desktop-conteiner {
+                width: 30%;
+            }
+        }
+
+        /* Estilos para mobile */
+        @media (max-width: 767px) {
+            #desktop-conteiner {
+                width: 90%; /* Ajuste para mobile */
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="desktop-conteiner">
+        <div class="header">
+            <a href="mainscreen.html"><img src="img/botao-voltar.png" alt="Voltar" id="back-arrow"></a>
+            <h1>Agendamento</h1>
+            <img id="logo-little" src="img/logo.png" alt="Tattoo Logo">
+        </div>
+        <hr>
+        <br>
+        <div class="calendar">
+            <div class="calendar-header">
+                <button class="nav-btn" id="prev-month">&lt;</button>
+                <div class="month-year" id="month-year">Novembro 2024</div>
+                <button class="nav-btn" id="next-month">&gt;</button>
+            </div>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>dom</th>
+                        <th>seg</th>
+                        <th>ter</th>
+                        <th>qua</th>
+                        <th>qui</th>
+                        <th>sex</th>
+                        <th>sáb</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body">
+                    <!-- Dias do calendário serão gerados aqui -->
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="available-times">
+            <h2>Horários disponíveis:</h2>
+            <button class="time-slot">09:30</button>
+            <button class="time-slot">13:00</button>
+            <button class="time-slot">16:00</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
